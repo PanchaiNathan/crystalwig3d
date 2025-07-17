@@ -1,0 +1,853 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:500,600,700,800,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+}
+
+html,
+body {
+    overflow-x: hidden;
+    /* To prevent Horizontal scroll */
+}
+
+html {
+    scroll-behavior: smooth;
+    /* To scrolling animation */
+}
+
+#header {
+    position: absolute;
+    /* To Overlap with background */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.5em 5em;
+    display: flex;
+    /* To get elements in row */
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99999;
+    /* Header shld be above everything */
+}
+
+#header .logo {
+    color: #002431;
+    font-weight: 800;
+    font-size: 2.5em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    /* To prevent Underline */
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+#header ul {
+    display: flex;
+    /* To get elements in row */
+    justify-content: space-around;
+    align-items: center;
+}
+
+#header ul li {
+    list-style: none;
+    /* To Remove dot */
+    margin: 0px 10px;
+}
+
+#header ul li a {
+    text-decoration: none;
+    /* To prevent Underline */
+    padding: 6px 15px;
+    color: #003549;
+    border-radius: 20px;
+}
+
+#header ul li a:hover,
+#header ul li a.active {
+    background: #003549;
+    color: white;
+}
+
+/* Simple Professional Header */
+.simple-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    z-index: 99999;
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+
+.logo-section .logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #002431;
+}
+
+.simple-header .logo-img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo-text {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: #002431;
+}
+
+.main-nav .nav-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #002431;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #4169E1;
+    background: rgba(65, 105, 225, 0.1);
+}
+
+.nav-link.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 2px;
+    background: #4169E1;
+    border-radius: 1px;
+}
+
+.cta-button {
+    background: linear-gradient(135deg, #4169E1, #6495ED);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(65, 105, 225, 0.4);
+    background: linear-gradient(135deg, #6495ED, #4169E1);
+}
+
+/* Clean Header Styles */
+.clean-header {
+     background: rgba(45, 26, 28, 0.7) !important;
+            box-shadow: none !important;
+            border-bottom: none !important;
+            transition: all 0.3s ease !important;
+}
+
+.header-wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    height: 80px;
+}
+
+.logo-section .logo-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+    color: #002431;
+}
+
+.header-logo {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.company-name {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: #002431;
+    letter-spacing: -0.5px;
+}
+
+.navigation .nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 30px;
+    align-items: center;
+}
+
+.nav-item {
+    text-decoration: none;
+    color: #002431;
+    font-size: 1.1em;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.nav-item:hover {
+    color: #4169E1;
+    background: rgba(65, 105, 225, 0.1);
+}
+
+.nav-item.active {
+    color: #4169E1;
+    background: rgba(65, 105, 225, 0.15);
+}
+
+.nav-item.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 2px;
+    background: #4169E1;
+    border-radius: 1px;
+}
+
+.quote-btn {
+    background: linear-gradient(135deg, #4169E1, #6495ED);
+    color: white;
+    padding: 12px 24px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1em;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(65, 105, 225, 0.3);
+    border: none;
+    cursor: pointer;
+}
+
+.quote-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(65, 105, 225, 0.4);
+    background: linear-gradient(135deg, #6495ED, #4169E1);
+    color: white;
+}
+
+/* The Section Body... Set it to max size of screen */
+section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* To blend section color with sky color */
+section::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #1e3c72, transparent);
+    z-index: 10;
+}
+
+/* Make all images absolute and cover whole screen */
+section img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+/* Properites for th text on top section  */
+section #text span {
+    font-size: 0.2em;
+    letter-spacing: 2px;
+    font-weight: 400;
+    color: white;
+}
+
+section #text {
+    position: absolute;
+    color: #004660;
+    font-size: 10vw;
+    text-align: center;
+    line-height: 0.55em;
+    font-family: 'Rancho', cursive;
+    transform: translateY(-50%);
+    top: 50%;
+}
+
+
+/* The explore Button */
+#explore {
+    text-decoration: none;
+    /* To prevent Underline */
+    padding: 8px 25px;
+    background: white;
+    color: #003549;
+    font-size: 1.3em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    border-radius: 40px;
+    transform: translateY(100px);
+    /* To move it 100px below from center */
+}
+
+#explore:hover {
+    background: #003549;
+    color: white;
+}
+
+/* Propeties of Top button */
+#top {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(45deg, #4169E1, #1E90FF);
+    bottom: 10%;
+    right: 5%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 25px;
+    border-radius: 50%;
+    box-shadow: 0 10px 20px rgba(65, 105, 225, 0.3);
+    z-index: 100;
+    display: none;
+    transition: all 0.3s ease;
+}
+
+#top:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 25px rgba(65, 105, 225, 0.4);
+}
+
+
+
+/* Glass Effect */
+.glass {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-Left: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    padding: 1em;
+    margin-bottom: 2%;
+}
+
+/* Properties for middle section (aviation theme) */
+.sec {
+    position: relative;
+    padding: 10%;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    padding-bottom: 15%;
+    z-index: 50;
+    overflow: hidden;
+}
+
+/* Properties for text content */
+.sec h2 {
+    font-size: 3.5em;
+}
+
+.sec #tagline {
+    font-size: 1.5em;
+    font-family: 'Rancho', cursive;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: #e6bb95;
+}
+
+.sec h3 {
+    font-size: 1.8em;
+    margin: 2%;
+}
+
+.sec h4 {
+    font-size: 1.2em;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.sec p {
+    margin: 10px 20px 40px;
+}
+
+.sec ul {
+    margin: 0 5%;
+}
+
+.sec ul li {
+    margin: 2%;
+}
+
+
+/* Make all aircraft images as absolute.. To overlap with background */
+.aircraft {
+    position: absolute;
+    opacity: 0.8;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    object-fit: cover;
+    will-change: transform;
+}
+
+/* Properties for each aircraft */
+#plane1 {
+    top: 5%;
+    right: -15%;
+    width: 150px;
+    height: 100px;
+    animation: flyAcross 20s linear infinite;
+}
+
+#plane2 {
+    top: 25%;
+    left: -15%;
+    width: 140px;
+    height: 90px;
+    animation: flyAcross 25s linear infinite reverse;
+}
+
+#plane3 {
+    top: 45%;
+    right: -15%;
+    width: 160px;
+    height: 110px;
+    animation: flyAcross 30s linear infinite;
+}
+
+#helicopter {
+    top: 70%;
+    left: -15%;
+    width: 120px;
+    height: 80px;
+    animation: flyAcross 15s linear infinite reverse;
+}
+
+@keyframes flyAcross {
+    0% {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translateX(calc(100vw + 200px));
+        opacity: 0;
+    }
+}
+
+.floating-clouds {
+    position: absolute;
+    opacity: 0.7;
+    border-radius: 15px;
+    object-fit: cover;
+    will-change: transform;
+}
+
+#cloud1 {
+    top: 10%;
+    left: 1%;
+    width: 200px;
+    height: 120px;
+    animation: floatClouds 40s linear infinite;
+}
+
+#cloud2 {
+    top: 30%;
+    right: 1%;
+    width: 180px;
+    height: 100px;
+    animation: floatClouds 35s linear infinite reverse;
+}
+
+#cloud3 {
+    top: 60%;
+    left: 10%;
+    width: 220px;
+    height: 130px;
+    animation: floatClouds 45s linear infinite;
+}
+
+@keyframes floatClouds {
+    0% {
+        transform: translateX(-20px);
+    }
+    50% {
+        transform: translateX(20px);
+    }
+    100% {
+        transform: translateX(-20px);
+    }
+}
+
+/* Hero content styles */
+.hero-content {
+    position: absolute;
+    bottom: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    z-index: 100;
+}
+
+.hero-subtitle {
+    font-size: 1.2em;
+    color: white;
+    margin-top: 20px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* Aviation image positioning and sizing */
+#sky {
+    width: 110%;
+    height: 110%;
+    object-fit: cover;
+    top: -5%;
+    left: -5%;
+}
+
+#sun {
+    width: 150px;
+    height: 150px;
+    top: 10%;
+    right: 10%;
+    will-change: transform;
+}
+
+#clouds {
+    width: 400px;
+    height: 200px;
+    top: 20%;
+    left: 30%;
+    object-fit: cover;
+    border-radius: 20px;
+    opacity: 0.8;
+    will-change: transform;
+}
+
+#jet {
+    width: 300px;
+    height: 200px;
+    top: 40%;
+    right: 20%;
+    object-fit: cover;
+    border-radius: 15px;
+    will-change: transform;
+}
+
+#contrails {
+    width: 600px;
+    height: 40px;
+    top: 42%;
+    right: 5%;
+    will-change: transform;
+}
+
+/* Scrolling text animation */
+.scrolling-text {
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 40px 0;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px 0;
+    border-radius: 10px;
+}
+
+.scroll-content {
+    display: inline-block;
+    animation: scroll-left 30s linear infinite;
+}
+
+.scroll-content span {
+    margin-right: 50px;
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #e6bb95;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+
+/* Properties for mobile */
+@media screen and (max-width: 650px) {
+
+    #header {
+        padding: 1em 2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #header ul {
+        padding: 0.5em;
+    }
+
+    #header .logo {
+        font-size: 1.8em;
+        gap: 10px;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* Mobile styles for simple header */
+    .simple-header .header-container {
+        padding: 0 1rem;
+    }
+
+    .simple-header .header-content {
+        height: 70px;
+        flex-wrap: wrap;
+    }
+
+    .simple-header .logo-text {
+        font-size: 1.4em;
+    }
+
+    .simple-header .logo-img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .main-nav .nav-menu {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-link {
+        font-size: 1em;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .cta-button {
+        padding: 10px 20px;
+        font-size: 0.9em;
+    }
+
+    /* Mobile styles for clean header */
+    .clean-header .header-wrapper {
+        padding: 10px 20px;
+        height: 70px;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .clean-header .company-name {
+        font-size: 1.4em;
+    }
+
+    .clean-header .header-logo {
+        width: 45px;
+        height: 45px;
+    }
+
+    .navigation .nav-list {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .clean-header .nav-item {
+        font-size: 0.95em;
+        padding: 6px 12px;
+    }
+
+    .clean-header .quote-btn {
+        padding: 8px 16px;
+        font-size: 0.9em;
+    }
+
+    section #text {
+        font-size: 20vw;
+        /* Adjust text size acc to screen size */
+    }
+
+    /* Mobile adjustments for aviation elements */
+    #sun {
+        width: 80px !important;
+        height: 80px !important;
+    }
+
+    #clouds {
+        width: 250px !important;
+        height: 120px !important;
+    }
+
+    #jet {
+        width: 200px !important;
+        height: 120px !important;
+    }
+
+    #contrails {
+        width: 300px !important;
+        height: 20px !important;
+    }
+
+    .hero-content {
+        bottom: 15%;
+    }
+
+    .hero-subtitle {
+        font-size: 1em;
+    }
+
+    /* Adjust text content acc to screen size */
+    .sec ul li {
+        margin: 20px;
+    }
+
+    .sec ul {
+        margin: 0px 0px;
+    }
+
+    .sec h3 {
+        font-size: 1.5em;
+        margin: 20px 0px;
+    }
+
+    .sec p {
+        margin: 1% 4%;
+    }
+
+    .glass {
+        backdrop-filter: blur(1px);
+    }
+
+    /* Mobile aircraft adjustments */
+    #plane1 {
+        width: 100px !important;
+        height: 70px !important;
+    }
+
+    #plane2 {
+        width: 95px !important;
+        height: 65px !important;
+    }
+
+    #plane3 {
+        width: 105px !important;
+        height: 75px !important;
+    }
+
+    #helicopter {
+        width: 80px !important;
+        height: 55px !important;
+    }
+
+    #cloud1 {
+        width: 120px !important;
+        height: 80px !important;
+    }
+
+    #cloud2 {
+        width: 110px !important;
+        height: 70px !important;
+    }
+
+    #cloud3 {
+        width: 130px !important;
+        height: 85px !important;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin: 20px 0;
+    }
+
+    .scrolling-text {
+        margin: 20px 0;
+    }
+
+    .scroll-content span {
+        font-size: 1.2em;
+        margin-right: 30px;
+    }
+}

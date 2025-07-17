@@ -1,0 +1,21 @@
+<svg width="220" height="70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="plane3Gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#32CD32;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#90EE90;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#228B22;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <!-- Main body -->
+  <ellipse cx="110" cy="35" rx="100" ry="14" fill="url(#plane3Gradient)" />
+  <!-- Nose -->
+  <ellipse cx="200" cy="35" rx="18" ry="7" fill="#228B22" />
+  <!-- Wings -->
+  <ellipse cx="85" cy="35" rx="45" ry="22" fill="#006400" />
+  <!-- Tail -->
+  <polygon points="15,35 40,25 40,45" fill="#228B22" />
+  <!-- Engine -->
+  <ellipse cx="65" cy="35" rx="20" ry="9" fill="#013220" />
+  <!-- Windows -->
+  <rect x="130" y="30" width="45" height="10" rx="5" fill="#F0FFF0" opacity="0.8" />
+</svg>

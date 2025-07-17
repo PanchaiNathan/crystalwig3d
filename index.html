@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and personalized attention to redefine your journey through the skies.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+    <!-- Page Title -->
+    <title>Crystal Wings - Private Jet Navigation</title>
+
+    <!-- CSS Files -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" id="bootstrap">
+    <link href="css/vendors.css" rel="stylesheet" type="text/css" >
+    <link href="css/style.css" rel="stylesheet" type="text/css" >
+    <!-- color scheme -->
+    <link id="colors" href="css/colors/scheme-rosegold.css" rel="stylesheet" type="text/css" >
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Open Graph meta tags for image sharing -->
+    <meta property="og:title" content="Crystal Wings - Private Jet Navigation">
+    <meta property="og:description"
+        content="Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and personalized attention.")
+    <meta property="og:image" content="https://drive.google.com/uc?id=1GFbBHTi7w8weRVqLJ7bkofezEEGg4U30">
+    <meta property="og:type" content="website" />
+
+     <style>
+        /* Custom Rose Gold Styling */
+        /* Transparent Header Styling */
+        /* Ensure header is transparent by default */
+        header.transparent {
+            background: rgba(45, 26, 28, 0.7) !important;
+            box-shadow: none !important;
+            border-bottom: none !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        /* Make sure the header elements are visible on transparent background */
+        header.transparent #mainmenu a {
+            text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.5);
+        }
+        
+        /* Transparent Header on Scroll */
+        header.smaller {
+            background: rgba(45, 26, 28, 0.7) !important; /* Using var(--bg-dark-1) with transparency */
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(var(--primary-color-rgb), 0.3) !important;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease !important;
+        }
+        
+        /* Add subtle rose gold glow to header on scroll */
+        header.smaller::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, transparent, rgba(var(--primary-color-rgb), 0.5), transparent);
+            opacity: 0.5;
+        }
+        
+        .hover-border-color:hover {
+            border-color: var(--primary-color) !important;
+            box-shadow: 0 0 20px rgba(var(--primary-color-rgb), 0.3);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-main {
+            background: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        .btn-main:hover {
+            background: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        
+        h3 {
+            color: var(--primary-color);
+        }
+        
+        .small-border.bg-color {
+            background: var(--primary-color);
+            width: 50px;
+            height: 3px;
+            margin: 15px 0;
+        }
+        
+        .service-card-highlight {
+            border-left: 4px solid var(--primary-color);
+        }
+        
+        .hover-color:hover {
+            color: var(--primary-color) !important;
+            transition: all 0.3s ease;
+        }
+        
+        /* Video Background Styling */
+        video#sky {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <!-- Header exactly like service.html -->
+    <header class="transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="de-flex">
+                        <div class="de-flex-col">
+                            <!-- logo begin -->
+                            <div id="logo">
+                                <a href="index.html">
+                                    <img class="logo-main" src="images/logo.png" alt="" >
+                                    <img class="logo-scroll" src="images/logo.png" alt="" >
+                                    <img class="logo-mobile" src="images/logo.png" alt="" >
+                                </a>
+                            </div>
+                            <!-- logo close -->
+                        </div>
+
+                        <div class="de-flex-col">
+                            <div class="de-flex-col header-col-mid">
+                                <ul id="mainmenu">
+                                    <li><a class="menu-item active" href="index.html">Home</a></li>
+                                    <li><a class="menu-item" href="service.html">Services</a></li>
+                                    <li><a class="menu-item" href="fleet.html">Fleet</a></li>
+                                    <li><a class="menu-item" href="">Destinations</a></li>
+                                    <li><a class="menu-item" href="investment.html">Investment</a></li>
+                                    <li><a class="menu-item" href="contact.html">Contact</a></li>
+                                   </ul>
+                            </div>
+                        </div>
+
+                        <div class="de-flex-col">
+                            <a class="btn-main fx-slide w-100" href="contact.html"><span>Get Quote</span></a>
+
+                            <div class="menu_side_area">
+                                <span id="menu-btn"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- This is the Top Section (Hero Section) -->
+    <section style="margin-top: 80px;">
+        <!-- <img src="images/New folder/8.jpg" id="sky" class="wallpaper"> -->
+        <img src="images/New folder/6.jpg" id="clouds" class="wallpaper">
+        <img src="images/New folder/fly.jpg" id="jet">
+        
+        <video id="sky" class="wallpaper" autoplay muted loop playsinline>
+            <source src="video/vid12.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- <img src="images/New folder/3.jpg" id="contrails"> -->
+       
+    </section>
+
+    <!-- This is the Main Content Section -->
+    <div class="sec" id="sec">
+
+        <!-- Importing aviation background elements -->
+        <img src="images/New folder/1.jpeg" id="cloud1" class="floating-clouds">
+        <img src="images/New folder/2.jpg" id="cloud2" class="floating-clouds">
+        <img src="images/New folder/3.jpg" id="cloud3" class="floating-clouds">
+
+        <!-- Text Content here -->
+        <h2>About Us</h2>
+        <div id="tagline">Elevating Your Travel Experience</div>
+
+        <br>
+
+        <div class="glass">
+            <h3>Our Mission</h3>
+            <p>
+                Crystal Wings offers unparalleled private jet charter services, combining luxury, efficiency, and 
+                personalized attention to redefine your journey through the skies. We understand that time is your 
+                most valuable asset, and our mission is to provide seamless, luxurious travel experiences that 
+                exceed your expectations.
+                <br><br>
+                Our commitment to excellence extends beyond just transportation. We offer:
+                <br>
+                • 24/7 on-demand private jet charter services<br>
+                • Global network of premium destinations<br>
+                • Curated fleet of luxury aircraft<br>
+                • Personalized concierge services<br>
+                • Uncompromising safety standards
+                <br><br>
+                Whether you're traveling for business or leisure, Crystal Wings ensures that every aspect of your 
+                journey is meticulously planned and executed to perfection. Experience the difference of true luxury 
+                aviation with Crystal Wings.
+            </p>
+        </div>
+
+        <br>
+
+        <div class="glass">
+            <h3>Why Choose Crystal Wings?</h3>
+            <ul>
+                <p>Experience the Crystal Wings advantage with our premium services:</p>
+                <li>
+                    <h4>Luxury Fleet Selection</h4>
+                    <p>
+                        Choose from our meticulously maintained fleet of premium aircraft tailored to your specific needs. 
+                        From light jets for short regional trips to heavy jets for transcontinental journeys, our diverse 
+                        fleet ensures the perfect aircraft for every mission. Each aircraft is equipped with state-of-the-art 
+                        amenities and maintained to the highest industry standards.
+                    </p>
+                </li>
+                <li>
+                    <h4>Global Destinations</h4>
+                    <p>
+                        Access over 5,000 airports worldwide, reaching destinations commercial airlines cannot serve. 
+                        Our global network allows you to fly directly to your destination, saving valuable time and 
+                        providing unmatched convenience. Whether it's a remote business location or an exclusive vacation 
+                        destination, Crystal Wings can get you there.
+                    </p>
+                </li>
+                <li>
+                    <h4>Time Efficiency</h4>
+                    <p>
+                        Skip long security lines and boarding procedures, with the ability to depart within as little as 
+                        3 hours' notice. Your time is precious, and we respect that by providing streamlined processes 
+                        that get you airborne quickly and efficiently, allowing you to maximize your productivity.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Scrolling text animation -->
+        <div class="scrolling-text">
+            <div class="scroll-content">
+                <span>Luxury Travel</span>
+                <span>Global Destinations</span>
+                <span>Premium Service</span>
+                <span>Exclusive Access</span>
+                <span>Seamless Journey</span>
+                <span>Sky Luxury</span>
+                <span>Private Jets</span>
+                <span>Bespoke Travel</span>
+                <span>Worldwide Reach</span>
+                <span>Elite Experience</span>
+                <span>Time Efficiency</span>
+                <span>Personalized Service</span>
+            </div>
+        </div>
+
+        <br>
+
+        <div class="glass" id="destinations">
+            <h3>Our Premium Services</h3>
+            <ul>
+                <li>
+                    <h4>Personalized Service</h4>
+                    <p>
+                        Experience bespoke travel with customized catering, ground transportation, and in-flight amenities 
+                        tailored to your preferences. Our dedicated concierge team ensures every detail of your journey 
+                        is perfectly orchestrated to exceed your expectations.
+                    </p>
+                </li>
+                <li>
+                    <h4>Safety Excellence</h4>
+                    <p>
+                        Fly with confidence knowing our aircraft meet the highest safety standards with experienced pilots 
+                        and regular maintenance. Our commitment to safety is unwavering, with rigorous inspections and 
+                        adherence to all aviation regulations.
+                    </p>
+                </li>
+                <li>
+                    <h4>Flexible Booking</h4>
+                    <p>
+                        Choose from on-demand charter, membership programs, or empty leg flights to match your travel needs 
+                        and budget. We offer flexible solutions that adapt to your schedule and requirements, ensuring 
+                        maximum convenience and value.
+                    </p>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Importing aviation animated elements -->
+        <img src="images/New folder/4.jpg" id="plane1" class="aircraft">
+        <img src="images/New folder/5.webp" id="plane2" class="aircraft">
+        <img src="images/New folder/fly.jpg" id="plane3" class="aircraft">
+        <img src="images/New folder/6.jpg" id="helicopter" class="aircraft">
+
+        <!-- Container for the floating elements animation -->
+        <div class="floating-elements">
+            <div class="cloud-particle"></div>
+            <div class="cloud-particle"></div>
+            <div class="cloud-particle"></div>
+            <div class="cloud-particle"></div>
+            <div class="cloud-particle"></div>
+            <div class="cloud-particle"></div>
+            <div class="cloud-particle"></div>
+        </div>
+    </div>
+
+    <!-- Code for the footer -->
+    <div class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> T. +1 800 JET WING</p>
+                <p><i class="fas fa-envelope"></i> M. charter@crystalwings.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 1250 Aviation Drive, Suite 300<br>San Francisco, CA 94128</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="wrapper">
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <span>LinkedIn</span>
+                    </div>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <span>Twitter</span>
+                    </div>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <span>Facebook</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Copyright 2025 - Crystal Wings Private Jet Charter Services</span>
+        </div>
+    </div>
+
+    <!-- The button to scroll back to top -->
+    <a id="top" href="#"> <i class="fas fa-arrow-up"></i> </a>
+</body>
+
+<!-- JavaScript Files -->
+<script src="js/vendors.js"></script>
+<script src="js/Shashwathagroups.js"></script>
+<script src="js/countdown-custom.js"></script>
+<script src="js/custom-marquee.js"></script>
+<script src="action.js"></script>
+
+</html>

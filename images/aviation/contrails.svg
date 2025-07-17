@@ -1,0 +1,17 @@
+<svg width="600" height="40" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="contrailGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" />
+      <stop offset="20%" style="stop-color:rgba(255,255,255,0.8);stop-opacity:1" />
+      <stop offset="80%" style="stop-color:rgba(255,255,255,0.6);stop-opacity:1" />
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0);stop-opacity:0" />
+    </linearGradient>
+    <filter id="blur2" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3"/>
+    </filter>
+  </defs>
+  <!-- Main contrail -->
+  <ellipse cx="300" cy="20" rx="280" ry="8" fill="url(#contrailGradient)" filter="url(#blur2)"/>
+  <!-- Secondary contrail -->
+  <ellipse cx="300" cy="25" rx="260" ry="6" fill="url(#contrailGradient)" filter="url(#blur2)" opacity="0.6"/>
+</svg>

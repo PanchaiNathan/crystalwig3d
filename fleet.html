@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Crystal Wings' premium fleet of private jets and aircraft. From light jets to heavy jets, discover luxury aviation at its finest.">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/logo.png">
+
+    <!-- Page Title -->
+    <title>Our Fleet - Crystal Wings Private Jets</title>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- Open Graph meta tags -->
+    <meta property="og:title" content="Our Fleet - Crystal Wings Private Jets">
+    <meta property="og:description" content="Explore Crystal Wings' premium fleet of private jets and aircraft.">
+    <meta property="og:image" content="https://drive.google.com/uc?id=1GFbBHTi7w8weRVqLJ7bkofezEEGg4U30">
+    <meta property="og:type" content="website" />
+
+    <style>
+        .fleet-hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/New folder/8.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .fleet-hero h1 {
+            font-size: 4em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .fleet-hero p {
+            font-size: 1.3em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .fleet-categories {
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .category-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .category-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .category-card h3 {
+            color: #e6bb95;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .category-card p {
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .specs-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .specs-list li {
+            padding: 5px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .specs-list li:last-child {
+            border-bottom: none;
+        }
+
+        .specs-list strong {
+            color: #e6bb95;
+        }
+
+        .fleet-features {
+            padding: 80px 5%;
+            background: #1a1a1a;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-item i {
+            font-size: 3em;
+            color: #4169E1;
+            margin-bottom: 20px;
+        }
+
+        .feature-item h4 {
+            color: #e6bb95;
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+
+        @media screen and (max-width: 768px) {
+            .fleet-hero h1 {
+                font-size: 2.5em;
+            }
+
+            .category-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Header -->
+    <header id="header">
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="Crystal Wings Logo" class="logo-img">
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="service.html">Services</a></li>
+            <li><a href="fleet.html" class="active">Fleet</a></li>
+            <li><a href="#">Destinations</a></li>
+            <li><a href="investment.html">Investment</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </header>
+
+    <!-- Fleet Hero Section -->
+    <section class="fleet-hero">
+        <div>
+            <h1>Our Premium Fleet</h1>
+            <p>Discover our meticulously maintained collection of luxury aircraft, each designed to provide unparalleled comfort and performance for your journey.</p>
+        </div>
+    </section>
+
+    <!-- Fleet Categories -->
+    <section class="fleet-categories">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 3em; margin-bottom: 20px;">Aircraft Categories</h2>
+            <p style="font-size: 1.2em; max-width: 600px; margin: 0 auto;">From nimble light jets to spacious heavy jets, our diverse fleet ensures the perfect aircraft for every mission.</p>
+        </div>
+
+        <div class="category-grid">
+            <!-- Light Jets -->
+            <div class="category-card">
+                <img src="images/New folder/4.jpg" alt="Light Jets">
+                <h3>Light Jets</h3>
+                <p>Perfect for short to medium-range flights with exceptional fuel efficiency and agility. Ideal for business trips and quick getaways.</p>
+                <ul class="specs-list">
+                    <li><strong>Passengers:</strong> 4-8</li>
+                    <li><strong>Range:</strong> 1,200-2,400 miles</li>
+                    <li><strong>Speed:</strong> 400-500 mph</li>
+                    <li><strong>Examples:</strong> Citation CJ3+, Phenom 300</li>
+                </ul>
+            </div>
+
+            <!-- Mid-Size Jets -->
+            <div class="category-card">
+                <img src="images/New folder/5.webp" alt="Mid-Size Jets">
+                <h3>Mid-Size Jets</h3>
+                <p>The perfect balance of comfort, range, and performance. Spacious cabins with premium amenities for longer journeys.</p>
+                <ul class="specs-list">
+                    <li><strong>Passengers:</strong> 6-9</li>
+                    <li><strong>Range:</strong> 2,000-3,500 miles</li>
+                    <li><strong>Speed:</strong> 450-550 mph</li>
+                    <li><strong>Examples:</strong> Citation Latitude, Hawker 900XP</li>
+                </ul>
+            </div>
+
+            <!-- Heavy Jets -->
+            <div class="category-card">
+                <img src="images/New folder/fly.jpg" alt="Heavy Jets">
+                <h3>Heavy Jets</h3>
+                <p>Ultimate luxury for transcontinental and international flights. Spacious cabins with full amenities and extended range capabilities.</p>
+                <ul class="specs-list">
+                    <li><strong>Passengers:</strong> 8-16</li>
+                    <li><strong>Range:</strong> 3,500-7,000 miles</li>
+                    <li><strong>Speed:</strong> 500-600 mph</li>
+                    <li><strong>Examples:</strong> Gulfstream G650, Falcon 7X</li>
+                </ul>
+            </div>
+
+            <!-- Ultra-Long Range -->
+            <div class="category-card">
+                <img src="images/New folder/1.jpeg" alt="Ultra-Long Range Jets">
+                <h3>Ultra-Long Range</h3>
+                <p>The pinnacle of private aviation. Fly anywhere in the world non-stop with uncompromising luxury and comfort.</p>
+                <ul class="specs-list">
+                    <li><strong>Passengers:</strong> 10-19</li>
+                    <li><strong>Range:</strong> 6,000+ miles</li>
+                    <li><strong>Speed:</strong> 550-650 mph</li>
+                    <li><strong>Examples:</strong> Global 7500, Gulfstream G700</li>
+                </ul>
+            </div>
+
+            <!-- Helicopters -->
+            <div class="category-card">
+                <img src="images/New folder/2.jpg" alt="Helicopters">
+                <h3>Helicopters</h3>
+                <p>Versatile rotorcraft for short-distance travel, city transfers, and accessing remote locations with precision landing capabilities.</p>
+                <ul class="specs-list">
+                    <li><strong>Passengers:</strong> 4-8</li>
+                    <li><strong>Range:</strong> 300-600 miles</li>
+                    <li><strong>Speed:</strong> 150-200 mph</li>
+                    <li><strong>Examples:</strong> AW139, Bell 429</li>
+                </ul>
+            </div>
+
+            <!-- Turboprops -->
+            <div class="category-card">
+                <img src="images/New folder/3.jpg" alt="Turboprops">
+                <h3>Turboprops</h3>
+                <p>Efficient and reliable aircraft perfect for short runways and regional travel with excellent fuel economy.</p>
+                <ul class="specs-list">
+                    <li><strong>Passengers:</strong> 6-12</li>
+                    <li><strong>Range:</strong> 800-1,500 miles</li>
+                    <li><strong>Speed:</strong> 300-400 mph</li>
+                    <li><strong>Examples:</strong> King Air 350, TBM 940</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fleet Features -->
+    <section class="fleet-features">
+        <div style="text-align: center; margin-bottom: 60px;">
+            <h2 style="font-size: 3em; margin-bottom: 20px;">Fleet Features</h2>
+            <p style="font-size: 1.2em; max-width: 600px; margin: 0 auto;">Every aircraft in our fleet is equipped with premium amenities and maintained to the highest standards.</p>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-item">
+                <i class="fas fa-shield-alt"></i>
+                <h4>Safety First</h4>
+                <p>All aircraft undergo rigorous maintenance and safety inspections exceeding industry standards.</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="fas fa-wifi"></i>
+                <h4>Connectivity</h4>
+                <p>High-speed Wi-Fi and satellite communication systems keep you connected at altitude.</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="fas fa-utensils"></i>
+                <h4>Gourmet Catering</h4>
+                <p>Customized dining experiences with premium cuisine tailored to your preferences.</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="fas fa-bed"></i>
+                <h4>Luxury Interiors</h4>
+                <p>Spacious cabins with premium leather seating, entertainment systems, and sleeping accommodations.</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="fas fa-clock"></i>
+                <h4>24/7 Availability</h4>
+                <p>Our fleet is available around the clock to meet your travel schedule and requirements.</p>
+            </div>
+
+            <div class="feature-item">
+                <i class="fas fa-globe"></i>
+                <h4>Global Access</h4>
+                <p>Access to over 5,000 airports worldwide, reaching destinations others cannot serve.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div class="footer" id="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-phone"></i> T. +1 800 JET WING</p>
+                <p><i class="fas fa-envelope"></i> M. charter@crystalwings.com</p>
+                <p><i class="fas fa-map-marker-alt"></i> 1250 Aviation Drive, Suite 300<br>San Francisco, CA 94128</p>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <div class="wrapper">
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <span>Instagram</span>
+                    </div>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fa-brands fa-linkedin"></i>
+                        </div>
+                        <span>LinkedIn</span>
+                    </div>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <span>Twitter</span>
+                    </div>
+                    <div class="social-media">
+                        <div class="icon">
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                        <span>Facebook</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>Copyright 2025 - Crystal Wings Private Jet Charter Services</span>
+        </div>
+    </div>
+
+    <!-- Scroll to top button -->
+    <a id="top" href="#"> <i class="fas fa-arrow-up"></i> </a>
+
+    <!-- JavaScript -->
+    <script src="action.js"></script>
+</body>
+
+</html>
